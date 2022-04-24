@@ -20,8 +20,8 @@ let package = Package(
     dependencies: [
         .package(
             name: "Publish",
-            url: "https://github.com/johnsundell/publish.git",
-            branch: "swift-concurrency"
+            url: "https://github.com/mwermeester/publish.git",
+            branch: "patch"
         ),
         .package(
             name: "Splash",
