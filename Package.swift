@@ -18,14 +18,14 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/mwermeester/publish.git", branch: "patch"),
-        .package(url: "https://github.com/johnsundell/splash.git", from: "0.12.0")
+        .package(url: "https://github.com/mwermeester/Publish.git", branch: "patch"),
+        .package(url: "https://github.com/johnsundell/Splash.git", from: "0.16.0")
     ],
     targets: [
         .target(
-            name: "SplashPublishPlugin",
-            dependencies: ["Splash", "Publish"]
-        ),
+                name: "SplashPublishPlugin",
+                dependencies: [.product(name: "Publish", package: "Publish"), "Splash"]
+            ),
         .testTarget(
             name: "SplashPublishPluginTests",
             dependencies: ["SplashPublishPlugin"]
